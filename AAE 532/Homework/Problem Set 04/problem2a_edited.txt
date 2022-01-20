@@ -1,0 +1,12 @@
+sat_joseph_le.Earth.TA:		   90.0000000000001,		225.0000000002276
+sat_joseph_le.EarthMJ2000Eq.X:	   -1.779125091054934e-11,	-16732.06975372307
+sat_joseph_le.EarthMJ2000Eq.Y:     11915.806365 		-16725.03662970074
+sat_joseph_le.EarthMJ2000Eq.VX:    -5.783718791569632  		4.089692297547562 
+sat_joseph_le.EarthMJ2000Eq.VY:	   4.060748963561031 		-0.03093195783642557
+sat_joseph_le.Earth.OrbitPeriod:   35851.94933890153   		35823.48664542731 
+sat_joseph_le.Earth.Energy:	   -8.480860457446816		-8.485352039192412 
+sat_joseph_le.Earth.SemilatusRectum: 11915.80636499999		11915.85338216262
+sat_joseph_le.EarthMJ2000Eq.FPA:     54.9273070038215		134.578701983451
+sat_joseph_le.Earth.EA: 	     45.40426894643448		269.4085225450281
+sat_joseph_le.ElapsedSecs:	     0				29136.305183277 
+sat_joseph_le.ElapsedDays:	     0				0.3372257544360764

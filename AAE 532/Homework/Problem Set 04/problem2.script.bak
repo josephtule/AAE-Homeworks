@@ -1,0 +1,144 @@
+%General Mission Analysis Tool(GMAT) Script
+%Created: 2021-09-24 05:01:29
+
+
+%----------------------------------------
+%---------- Spacecraft
+%----------------------------------------
+
+Create Spacecraft sat_joseph_le;
+GMAT sat_joseph_le.DateFormat = UTCGregorian;
+GMAT sat_joseph_le.Epoch = '24 Sep 2021 12:00:00.000';
+GMAT sat_joseph_le.CoordinateSystem = EarthMJ2000Eq;
+GMAT sat_joseph_le.DisplayStateType = Keplerian;
+GMAT sat_joseph_le.SMA = 23499.99999999997;
+GMAT sat_joseph_le.ECC = 0.7021000000000001;
+GMAT sat_joseph_le.INC = 0;
+GMAT sat_joseph_le.RAAN = 0;
+GMAT sat_joseph_le.AOP = 0;
+GMAT sat_joseph_le.TA = 90.00000000000009;
+GMAT sat_joseph_le.DryMass = 850;
+GMAT sat_joseph_le.Cd = 2.2;
+GMAT sat_joseph_le.Cr = 1.8;
+GMAT sat_joseph_le.DragArea = 15;
+GMAT sat_joseph_le.SRPArea = 1;
+GMAT sat_joseph_le.SPADDragScaleFactor = 1;
+GMAT sat_joseph_le.SPADSRPScaleFactor = 1;
+GMAT sat_joseph_le.NAIFId = -10000001;
+GMAT sat_joseph_le.NAIFIdReferenceFrame = -9000001;
+GMAT sat_joseph_le.OrbitColor = Red;
+GMAT sat_joseph_le.TargetColor = Teal;
+GMAT sat_joseph_le.OrbitErrorCovariance = [ 1e+70 0 0 0 0 0 ; 0 1e+70 0 0 0 0 ; 0 0 1e+70 0 0 0 ; 0 0 0 1e+70 0 0 ; 0 0 0 0 1e+70 0 ; 0 0 0 0 0 1e+70 ];
+GMAT sat_joseph_le.CdSigma = 1e+70;
+GMAT sat_joseph_le.CrSigma = 1e+70;
+GMAT sat_joseph_le.Id = 'SatId';
+GMAT sat_joseph_le.Attitude = CoordinateSystemFixed;
+GMAT sat_joseph_le.SPADSRPInterpolationMethod = Bilinear;
+GMAT sat_joseph_le.SPADSRPScaleFactorSigma = 1e+70;
+GMAT sat_joseph_le.SPADDragInterpolationMethod = Bilinear;
+GMAT sat_joseph_le.SPADDragScaleFactorSigma = 1e+70;
+GMAT sat_joseph_le.ModelFile = 'aura.3ds';
+GMAT sat_joseph_le.ModelOffsetX = 0;
+GMAT sat_joseph_le.ModelOffsetY = 0;
+GMAT sat_joseph_le.ModelOffsetZ = 0;
+GMAT sat_joseph_le.ModelRotationX = 0;
+GMAT sat_joseph_le.ModelRotationY = 0;
+GMAT sat_joseph_le.ModelRotationZ = 0;
+GMAT sat_joseph_le.ModelScale = 1;
+GMAT sat_joseph_le.AttitudeDisplayStateType = 'Quaternion';
+GMAT sat_joseph_le.AttitudeRateDisplayStateType = 'AngularVelocity';
+GMAT sat_joseph_le.AttitudeCoordinateSystem = EarthMJ2000Eq;
+GMAT sat_joseph_le.EulerAngleSequence = '321';
+
+
+%----------------------------------------
+%---------- ForceModels
+%----------------------------------------
+
+Create ForceModel DefaultProp_ForceModel;
+GMAT DefaultProp_ForceModel.CentralBody = Earth;
+GMAT DefaultProp_ForceModel.PrimaryBodies = {Earth};
+GMAT DefaultProp_ForceModel.Drag = None;
+GMAT DefaultProp_ForceModel.SRP = Off;
+GMAT DefaultProp_ForceModel.RelativisticCorrection = Off;
+GMAT DefaultProp_ForceModel.ErrorControl = RSSStep;
+GMAT DefaultProp_ForceModel.GravityField.Earth.Degree = 4;
+GMAT DefaultProp_ForceModel.GravityField.Earth.Order = 4;
+GMAT DefaultProp_ForceModel.GravityField.Earth.StmLimit = 100;
+GMAT DefaultProp_ForceModel.GravityField.Earth.PotentialFile = 'JGM2.cof';
+GMAT DefaultProp_ForceModel.GravityField.Earth.TideModel = 'None';
+
+%----------------------------------------
+%---------- Propagators
+%----------------------------------------
+
+Create Propagator DefaultProp;
+GMAT DefaultProp.FM = DefaultProp_ForceModel;
+GMAT DefaultProp.Type = RungeKutta89;
+GMAT DefaultProp.InitialStepSize = 60;
+GMAT DefaultProp.Accuracy = 9.999999999999999e-12;
+GMAT DefaultProp.MinStep = 0.001;
+GMAT DefaultProp.MaxStep = 2700;
+GMAT DefaultProp.MaxStepAttempts = 50;
+GMAT DefaultProp.StopIfAccuracyIsViolated = true;
+
+%----------------------------------------
+%---------- Subscribers
+%----------------------------------------
+
+Create OrbitView DefaultOrbitView;
+GMAT DefaultOrbitView.SolverIterations = Current;
+GMAT DefaultOrbitView.UpperLeft = [ 0.002352941176470588 0 ];
+GMAT DefaultOrbitView.Size = [ 0.7305882352941176 0.9329411764705883 ];
+GMAT DefaultOrbitView.RelativeZOrder = 187;
+GMAT DefaultOrbitView.Maximized = false;
+GMAT DefaultOrbitView.Add = {sat_joseph_le, Earth};
+GMAT DefaultOrbitView.CoordinateSystem = EarthMJ2000Eq;
+GMAT DefaultOrbitView.DrawObject = [ true true ];
+GMAT DefaultOrbitView.DataCollectFrequency = 1;
+GMAT DefaultOrbitView.UpdatePlotFrequency = 50;
+GMAT DefaultOrbitView.NumPointsToRedraw = 0;
+GMAT DefaultOrbitView.ShowPlot = true;
+GMAT DefaultOrbitView.MaxPlotPoints = 20000;
+GMAT DefaultOrbitView.ShowLabels = true;
+GMAT DefaultOrbitView.ViewPointReference = Earth;
+GMAT DefaultOrbitView.ViewPointVector = [ 0 0 75000 ];
+GMAT DefaultOrbitView.ViewDirection = Earth;
+GMAT DefaultOrbitView.ViewScaleFactor = 1;
+GMAT DefaultOrbitView.ViewUpCoordinateSystem = EarthMJ2000Eq;
+GMAT DefaultOrbitView.ViewUpAxis = Z;
+GMAT DefaultOrbitView.EclipticPlane = Off;
+GMAT DefaultOrbitView.XYPlane = On;
+GMAT DefaultOrbitView.WireFrame = Off;
+GMAT DefaultOrbitView.Axes = On;
+GMAT DefaultOrbitView.Grid = Off;
+GMAT DefaultOrbitView.SunLine = Off;
+GMAT DefaultOrbitView.UseInitialView = On;
+GMAT DefaultOrbitView.StarCount = 7000;
+GMAT DefaultOrbitView.EnableStars = On;
+GMAT DefaultOrbitView.EnableConstellations = Off;
+
+Create ReportFile ReportFile1;
+GMAT ReportFile1.SolverIterations = Current;
+GMAT ReportFile1.UpperLeft = [ 0 0 ];
+GMAT ReportFile1.Size = [ 0 0 ];
+GMAT ReportFile1.RelativeZOrder = 0;
+GMAT ReportFile1.Maximized = false;
+GMAT ReportFile1.Filename = 'C:\Users\Joseph\MATLAB Drive\Fall 2021\AAE 532\Problem Set 03\problem2a.txt';
+GMAT ReportFile1.Precision = 16;
+GMAT ReportFile1.Add = {sat_joseph_le.Earth.TA, sat_joseph_le.EarthMJ2000Eq.X, sat_joseph_le.EarthMJ2000Eq.Y, sat_joseph_le.EarthMJ2000Eq.VX, sat_joseph_le.EarthMJ2000Eq.VY, sat_joseph_le.Earth.OrbitPeriod, sat_joseph_le.Earth.Energy, sat_joseph_le.Earth.SemilatusRectum, sat_joseph_le.EarthMJ2000Eq.FPA, sat_joseph_le.Earth.EA, sat_joseph_le.ElapsedSecs, sat_joseph_le.ElapsedDays};
+GMAT ReportFile1.WriteHeaders = true;
+GMAT ReportFile1.LeftJustify = On;
+GMAT ReportFile1.ZeroFill = Off;
+GMAT ReportFile1.FixedWidth = true;
+GMAT ReportFile1.Delimiter = ' ';
+GMAT ReportFile1.ColumnWidth = 23;
+GMAT ReportFile1.WriteReport = true;
+
+
+%----------------------------------------
+%---------- Mission Sequence
+%----------------------------------------
+
+BeginMissionSequence;
+Propagate DefaultProp(sat_joseph_le) {sat_joseph_le.Earth.TA = 225};

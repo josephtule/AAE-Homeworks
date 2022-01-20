@@ -1,0 +1,409 @@
+%General Mission Analysis Tool(GMAT) Script
+%Created: 2021-10-08 11:22:16
+
+
+%----------------------------------------
+%---------- Spacecraft
+%----------------------------------------
+
+Create Spacecraft sat1;
+GMAT sat1.DateFormat = UTCGregorian;
+GMAT sat1.Epoch = '31 Oct 2021 16:00:00.000';
+GMAT sat1.CoordinateSystem = EarthMJ2000Eq;
+GMAT sat1.DisplayStateType = Keplerian;
+GMAT sat1.SMA = 642589.9999999339;
+GMAT sat1.ECC = 0.9850999999999986;
+GMAT sat1.INC = 29.99999999999999;
+GMAT sat1.RAAN = 0;
+GMAT sat1.AOP = 0;
+GMAT sat1.TA = 0;
+GMAT sat1.DryMass = 850;
+GMAT sat1.Cd = 2.2;
+GMAT sat1.Cr = 1.8;
+GMAT sat1.DragArea = 15;
+GMAT sat1.SRPArea = 1;
+GMAT sat1.SPADDragScaleFactor = 1;
+GMAT sat1.SPADSRPScaleFactor = 1;
+GMAT sat1.NAIFId = -10000001;
+GMAT sat1.NAIFIdReferenceFrame = -9000001;
+GMAT sat1.OrbitColor = Red;
+GMAT sat1.TargetColor = Teal;
+GMAT sat1.OrbitErrorCovariance = [ 1e+70 0 0 0 0 0 ; 0 1e+70 0 0 0 0 ; 0 0 1e+70 0 0 0 ; 0 0 0 1e+70 0 0 ; 0 0 0 0 1e+70 0 ; 0 0 0 0 0 1e+70 ];
+GMAT sat1.CdSigma = 1e+70;
+GMAT sat1.CrSigma = 1e+70;
+GMAT sat1.Id = 'SatId';
+GMAT sat1.Attitude = CoordinateSystemFixed;
+GMAT sat1.SPADSRPInterpolationMethod = Bilinear;
+GMAT sat1.SPADSRPScaleFactorSigma = 1e+70;
+GMAT sat1.SPADDragInterpolationMethod = Bilinear;
+GMAT sat1.SPADDragScaleFactorSigma = 1e+70;
+GMAT sat1.ModelFile = 'aura.3ds';
+GMAT sat1.ModelOffsetX = 0;
+GMAT sat1.ModelOffsetY = 0;
+GMAT sat1.ModelOffsetZ = 0;
+GMAT sat1.ModelRotationX = 0;
+GMAT sat1.ModelRotationY = 0;
+GMAT sat1.ModelRotationZ = 0;
+GMAT sat1.ModelScale = 1;
+GMAT sat1.AttitudeDisplayStateType = 'Quaternion';
+GMAT sat1.AttitudeRateDisplayStateType = 'AngularVelocity';
+GMAT sat1.AttitudeCoordinateSystem = EarthMJ2000Eq;
+GMAT sat1.EulerAngleSequence = '321';
+
+Create Spacecraft sat2;
+GMAT sat2.DateFormat = UTCGregorian;
+GMAT sat2.Epoch = '31 Oct 2021 16:00:00.000';
+GMAT sat2.CoordinateSystem = EarthMJ2000Eq;
+GMAT sat2.DisplayStateType = Keplerian;
+GMAT sat2.SMA = 642589.9999999339;
+GMAT sat2.ECC = 0.9850999999999986;
+GMAT sat2.INC = 29.99999999999999;
+GMAT sat2.RAAN = 0;
+GMAT sat2.AOP = 0;
+GMAT sat2.TA = 0;
+GMAT sat2.DryMass = 850;
+GMAT sat2.Cd = 2.2;
+GMAT sat2.Cr = 1.8;
+GMAT sat2.DragArea = 15;
+GMAT sat2.SRPArea = 1;
+GMAT sat2.SPADDragScaleFactor = 1;
+GMAT sat2.SPADSRPScaleFactor = 1;
+GMAT sat2.NAIFId = -10000001;
+GMAT sat2.NAIFIdReferenceFrame = -9000001;
+GMAT sat2.OrbitColor = [0 255 64];
+GMAT sat2.TargetColor = [255 0 128];
+GMAT sat2.OrbitErrorCovariance = [ 1e+70 0 0 0 0 0 ; 0 1e+70 0 0 0 0 ; 0 0 1e+70 0 0 0 ; 0 0 0 1e+70 0 0 ; 0 0 0 0 1e+70 0 ; 0 0 0 0 0 1e+70 ];
+GMAT sat2.CdSigma = 1e+70;
+GMAT sat2.CrSigma = 1e+70;
+GMAT sat2.Id = 'SatId';
+GMAT sat2.Attitude = CoordinateSystemFixed;
+GMAT sat2.SPADSRPInterpolationMethod = Bilinear;
+GMAT sat2.SPADSRPScaleFactorSigma = 1e+70;
+GMAT sat2.SPADDragInterpolationMethod = Bilinear;
+GMAT sat2.SPADDragScaleFactorSigma = 1e+70;
+GMAT sat2.ModelFile = 'aura.3ds';
+GMAT sat2.ModelOffsetX = 0;
+GMAT sat2.ModelOffsetY = 0;
+GMAT sat2.ModelOffsetZ = 0;
+GMAT sat2.ModelRotationX = 0;
+GMAT sat2.ModelRotationY = 0;
+GMAT sat2.ModelRotationZ = 0;
+GMAT sat2.ModelScale = 1;
+GMAT sat2.AttitudeDisplayStateType = 'Quaternion';
+GMAT sat2.AttitudeRateDisplayStateType = 'AngularVelocity';
+GMAT sat2.AttitudeCoordinateSystem = EarthMJ2000Eq;
+GMAT sat2.EulerAngleSequence = '321';
+
+Create Spacecraft sat3;
+GMAT sat3.DateFormat = UTCGregorian;
+GMAT sat3.Epoch = '31 Oct 2021 16:00:00.000';
+GMAT sat3.CoordinateSystem = EarthMJ2000Eq;
+GMAT sat3.DisplayStateType = Keplerian;
+GMAT sat3.SMA = 642589.9999999633;
+GMAT sat3.ECC = 0.9850999999999994;
+GMAT sat3.INC = 29.99999999999999;
+GMAT sat3.RAAN = 0;
+GMAT sat3.AOP = 0;
+GMAT sat3.TA = 0;
+GMAT sat3.DryMass = 850;
+GMAT sat3.Cd = 2.2;
+GMAT sat3.Cr = 1.8;
+GMAT sat3.DragArea = 15;
+GMAT sat3.SRPArea = 1;
+GMAT sat3.SPADDragScaleFactor = 1;
+GMAT sat3.SPADSRPScaleFactor = 1;
+GMAT sat3.NAIFId = -10000001;
+GMAT sat3.NAIFIdReferenceFrame = -9000001;
+GMAT sat3.OrbitColor = [0 128 255];
+GMAT sat3.TargetColor = [255 255 0];
+GMAT sat3.OrbitErrorCovariance = [ 1e+70 0 0 0 0 0 ; 0 1e+70 0 0 0 0 ; 0 0 1e+70 0 0 0 ; 0 0 0 1e+70 0 0 ; 0 0 0 0 1e+70 0 ; 0 0 0 0 0 1e+70 ];
+GMAT sat3.CdSigma = 1e+70;
+GMAT sat3.CrSigma = 1e+70;
+GMAT sat3.Id = 'SatId';
+GMAT sat3.Attitude = CoordinateSystemFixed;
+GMAT sat3.SPADSRPInterpolationMethod = Bilinear;
+GMAT sat3.SPADSRPScaleFactorSigma = 1e+70;
+GMAT sat3.SPADDragInterpolationMethod = Bilinear;
+GMAT sat3.SPADDragScaleFactorSigma = 1e+70;
+GMAT sat3.ModelFile = 'aura.3ds';
+GMAT sat3.ModelOffsetX = 0;
+GMAT sat3.ModelOffsetY = 0;
+GMAT sat3.ModelOffsetZ = 0;
+GMAT sat3.ModelRotationX = 0;
+GMAT sat3.ModelRotationY = 0;
+GMAT sat3.ModelRotationZ = 0;
+GMAT sat3.ModelScale = 1;
+GMAT sat3.AttitudeDisplayStateType = 'Quaternion';
+GMAT sat3.AttitudeRateDisplayStateType = 'AngularVelocity';
+GMAT sat3.AttitudeCoordinateSystem = EarthMJ2000Eq;
+GMAT sat3.EulerAngleSequence = '321';
+
+Create Spacecraft sat4;
+GMAT sat4.DateFormat = UTCGregorian;
+GMAT sat4.Epoch = '31 Oct 2021 16:00:00.000';
+GMAT sat4.CoordinateSystem = EarthMJ2000Eq;
+GMAT sat4.DisplayStateType = Keplerian;
+GMAT sat4.SMA = 642589.9999999633;
+GMAT sat4.ECC = 0.9850999999999994;
+GMAT sat4.INC = 29.99999999999999;
+GMAT sat4.RAAN = 0;
+GMAT sat4.AOP = 0;
+GMAT sat4.TA = 0;
+GMAT sat4.DryMass = 850;
+GMAT sat4.Cd = 2.2;
+GMAT sat4.Cr = 1.8;
+GMAT sat4.DragArea = 15;
+GMAT sat4.SRPArea = 1;
+GMAT sat4.SPADDragScaleFactor = 1;
+GMAT sat4.SPADSRPScaleFactor = 1;
+GMAT sat4.NAIFId = -10000001;
+GMAT sat4.NAIFIdReferenceFrame = -9000001;
+GMAT sat4.OrbitColor = [255 128 255];
+GMAT sat4.TargetColor = [255 128 0];
+GMAT sat4.OrbitErrorCovariance = [ 1e+70 0 0 0 0 0 ; 0 1e+70 0 0 0 0 ; 0 0 1e+70 0 0 0 ; 0 0 0 1e+70 0 0 ; 0 0 0 0 1e+70 0 ; 0 0 0 0 0 1e+70 ];
+GMAT sat4.CdSigma = 1e+70;
+GMAT sat4.CrSigma = 1e+70;
+GMAT sat4.Id = 'SatId';
+GMAT sat4.Attitude = CoordinateSystemFixed;
+GMAT sat4.SPADSRPInterpolationMethod = Bilinear;
+GMAT sat4.SPADSRPScaleFactorSigma = 1e+70;
+GMAT sat4.SPADDragInterpolationMethod = Bilinear;
+GMAT sat4.SPADDragScaleFactorSigma = 1e+70;
+GMAT sat4.ModelFile = 'aura.3ds';
+GMAT sat4.ModelOffsetX = 0;
+GMAT sat4.ModelOffsetY = 0;
+GMAT sat4.ModelOffsetZ = 0;
+GMAT sat4.ModelRotationX = 0;
+GMAT sat4.ModelRotationY = 0;
+GMAT sat4.ModelRotationZ = 0;
+GMAT sat4.ModelScale = 1;
+GMAT sat4.AttitudeDisplayStateType = 'Quaternion';
+GMAT sat4.AttitudeRateDisplayStateType = 'AngularVelocity';
+GMAT sat4.AttitudeCoordinateSystem = EarthMJ2000Eq;
+GMAT sat4.EulerAngleSequence = '321';
+
+%----------------------------------------
+%---------- ForceModels
+%----------------------------------------
+
+Create ForceModel EarthMoon_ForceModel;
+GMAT EarthMoon_ForceModel.CentralBody = Earth;
+GMAT EarthMoon_ForceModel.PrimaryBodies = {Earth};
+GMAT EarthMoon_ForceModel.Drag = None;
+GMAT EarthMoon_ForceModel.SRP = Off;
+GMAT EarthMoon_ForceModel.RelativisticCorrection = Off;
+GMAT EarthMoon_ForceModel.ErrorControl = RSSStep;
+GMAT EarthMoon_ForceModel.GravityField.Earth.Degree = 4;
+GMAT EarthMoon_ForceModel.GravityField.Earth.Order = 4;
+GMAT EarthMoon_ForceModel.GravityField.Earth.StmLimit = 100;
+GMAT EarthMoon_ForceModel.GravityField.Earth.PotentialFile = 'JGM2.cof';
+GMAT EarthMoon_ForceModel.GravityField.Earth.TideModel = 'None';
+
+Create ForceModel EarthSun_ForceModel;
+GMAT EarthSun_ForceModel.CentralBody = Earth;
+GMAT EarthSun_ForceModel.PrimaryBodies = {Earth};
+GMAT EarthSun_ForceModel.Drag = None;
+GMAT EarthSun_ForceModel.SRP = Off;
+GMAT EarthSun_ForceModel.RelativisticCorrection = Off;
+GMAT EarthSun_ForceModel.ErrorControl = RSSStep;
+GMAT EarthSun_ForceModel.GravityField.Earth.Degree = 4;
+GMAT EarthSun_ForceModel.GravityField.Earth.Order = 4;
+GMAT EarthSun_ForceModel.GravityField.Earth.StmLimit = 100;
+GMAT EarthSun_ForceModel.GravityField.Earth.PotentialFile = 'JGM2.cof';
+GMAT EarthSun_ForceModel.GravityField.Earth.TideModel = 'None';
+
+Create ForceModel EarthMoonSun_ForceModel;
+GMAT EarthMoonSun_ForceModel.CentralBody = Earth;
+GMAT EarthMoonSun_ForceModel.PrimaryBodies = {Earth};
+GMAT EarthMoonSun_ForceModel.Drag = None;
+GMAT EarthMoonSun_ForceModel.SRP = Off;
+GMAT EarthMoonSun_ForceModel.RelativisticCorrection = Off;
+GMAT EarthMoonSun_ForceModel.ErrorControl = RSSStep;
+GMAT EarthMoonSun_ForceModel.GravityField.Earth.Degree = 4;
+GMAT EarthMoonSun_ForceModel.GravityField.Earth.Order = 4;
+GMAT EarthMoonSun_ForceModel.GravityField.Earth.StmLimit = 100;
+GMAT EarthMoonSun_ForceModel.GravityField.Earth.PotentialFile = 'JGM2.cof';
+GMAT EarthMoonSun_ForceModel.GravityField.Earth.TideModel = 'None';
+
+Create ForceModel EarthPointMass_ForceModel;
+GMAT EarthPointMass_ForceModel.CentralBody = Earth;
+GMAT EarthPointMass_ForceModel.PrimaryBodies = {Earth};
+GMAT EarthPointMass_ForceModel.Drag = None;
+GMAT EarthPointMass_ForceModel.SRP = Off;
+GMAT EarthPointMass_ForceModel.RelativisticCorrection = Off;
+GMAT EarthPointMass_ForceModel.ErrorControl = RSSStep;
+GMAT EarthPointMass_ForceModel.GravityField.Earth.Degree = 0;
+GMAT EarthPointMass_ForceModel.GravityField.Earth.Order = 0;
+GMAT EarthPointMass_ForceModel.GravityField.Earth.StmLimit = 100;
+GMAT EarthPointMass_ForceModel.GravityField.Earth.PotentialFile = 'JGM2.cof';
+GMAT EarthPointMass_ForceModel.GravityField.Earth.TideModel = 'None';
+
+Create ForceModel Propagator1_ForceModel;
+GMAT Propagator1_ForceModel.CentralBody = Earth;
+GMAT Propagator1_ForceModel.PrimaryBodies = {Earth};
+GMAT Propagator1_ForceModel.PointMasses = {Luna};
+GMAT Propagator1_ForceModel.Drag = None;
+GMAT Propagator1_ForceModel.SRP = Off;
+GMAT Propagator1_ForceModel.RelativisticCorrection = Off;
+GMAT Propagator1_ForceModel.ErrorControl = RSSStep;
+GMAT Propagator1_ForceModel.GravityField.Earth.Degree = 0;
+GMAT Propagator1_ForceModel.GravityField.Earth.Order = 0;
+GMAT Propagator1_ForceModel.GravityField.Earth.StmLimit = 100;
+GMAT Propagator1_ForceModel.GravityField.Earth.PotentialFile = 'JGM2.cof';
+GMAT Propagator1_ForceModel.GravityField.Earth.TideModel = 'None';
+
+%----------------------------------------
+%---------- Propagators
+%----------------------------------------
+
+Create Propagator EarthPointMass;
+GMAT EarthPointMass.FM = EarthPointMass_ForceModel;
+GMAT EarthPointMass.Type = RungeKutta89;
+GMAT EarthPointMass.InitialStepSize = 60;
+GMAT EarthPointMass.Accuracy = 9.999999999999999e-12;
+GMAT EarthPointMass.MinStep = 0.001;
+GMAT EarthPointMass.MaxStep = 2700;
+GMAT EarthPointMass.MaxStepAttempts = 50;
+GMAT EarthPointMass.StopIfAccuracyIsViolated = true;
+
+Create Propagator EarthMoon;
+GMAT EarthMoon.FM = Propagator1_ForceModel;
+GMAT EarthMoon.Type = RungeKutta89;
+GMAT EarthMoon.InitialStepSize = 60;
+GMAT EarthMoon.Accuracy = 9.999999999999999e-12;
+GMAT EarthMoon.MinStep = 0.001;
+GMAT EarthMoon.MaxStep = 2700;
+GMAT EarthMoon.MaxStepAttempts = 50;
+GMAT EarthMoon.StopIfAccuracyIsViolated = true;
+
+Create Propagator EarthSun;
+GMAT EarthSun.FM = Propagator1_ForceModel;
+GMAT EarthSun.Type = RungeKutta89;
+GMAT EarthSun.InitialStepSize = 60;
+GMAT EarthSun.Accuracy = 9.999999999999999e-12;
+GMAT EarthSun.MinStep = 0.001;
+GMAT EarthSun.MaxStep = 2700;
+GMAT EarthSun.MaxStepAttempts = 50;
+GMAT EarthSun.StopIfAccuracyIsViolated = true;
+
+Create Propagator EarthMoonSun;
+GMAT EarthMoonSun.FM = Propagator1_ForceModel;
+GMAT EarthMoonSun.Type = RungeKutta89;
+GMAT EarthMoonSun.InitialStepSize = 60;
+GMAT EarthMoonSun.Accuracy = 9.999999999999999e-12;
+GMAT EarthMoonSun.MinStep = 0.001;
+GMAT EarthMoonSun.MaxStep = 2700;
+GMAT EarthMoonSun.MaxStepAttempts = 50;
+GMAT EarthMoonSun.StopIfAccuracyIsViolated = true;
+
+%----------------------------------------
+%---------- Subscribers
+%----------------------------------------
+
+Create OrbitView Problem3aINC0_JosephLe;
+GMAT Problem3aINC0_JosephLe.SolverIterations = Current;
+GMAT Problem3aINC0_JosephLe.UpperLeft = [ 0 0 ];
+GMAT Problem3aINC0_JosephLe.Size = [ -5.722727272727273 0.9905882352941177 ];
+GMAT Problem3aINC0_JosephLe.RelativeZOrder = 1089;
+GMAT Problem3aINC0_JosephLe.Maximized = false;
+GMAT Problem3aINC0_JosephLe.Add = {sat1, sat2, sat3, sat4, Earth, Luna};
+GMAT Problem3aINC0_JosephLe.CoordinateSystem = EarthMJ2000Eq;
+GMAT Problem3aINC0_JosephLe.DrawObject = [ true true true true true true ];
+GMAT Problem3aINC0_JosephLe.DataCollectFrequency = 1;
+GMAT Problem3aINC0_JosephLe.UpdatePlotFrequency = 50;
+GMAT Problem3aINC0_JosephLe.NumPointsToRedraw = 0;
+GMAT Problem3aINC0_JosephLe.ShowPlot = true;
+GMAT Problem3aINC0_JosephLe.MaxPlotPoints = 20000;
+GMAT Problem3aINC0_JosephLe.ShowLabels = true;
+GMAT Problem3aINC0_JosephLe.ViewPointReference = Earth;
+GMAT Problem3aINC0_JosephLe.ViewPointVector = [ 0 0 5000000 ];
+GMAT Problem3aINC0_JosephLe.ViewDirection = Earth;
+GMAT Problem3aINC0_JosephLe.ViewScaleFactor = 1;
+GMAT Problem3aINC0_JosephLe.ViewUpCoordinateSystem = EarthMJ2000Eq;
+GMAT Problem3aINC0_JosephLe.ViewUpAxis = Z;
+GMAT Problem3aINC0_JosephLe.EclipticPlane = Off;
+GMAT Problem3aINC0_JosephLe.XYPlane = On;
+GMAT Problem3aINC0_JosephLe.WireFrame = Off;
+GMAT Problem3aINC0_JosephLe.Axes = On;
+GMAT Problem3aINC0_JosephLe.Grid = Off;
+GMAT Problem3aINC0_JosephLe.SunLine = Off;
+GMAT Problem3aINC0_JosephLe.UseInitialView = On;
+GMAT Problem3aINC0_JosephLe.StarCount = 7000;
+GMAT Problem3aINC0_JosephLe.EnableStars = On;
+GMAT Problem3aINC0_JosephLe.EnableConstellations = Off;
+
+Create ReportFile sat1report;
+GMAT sat1report.SolverIterations = Current;
+GMAT sat1report.UpperLeft = [ 0.09411764705882353 0.1223529411764706 ];
+GMAT sat1report.Size = [ 0.5994117647058823 0.7988235294117647 ];
+GMAT sat1report.RelativeZOrder = 698;
+GMAT sat1report.Maximized = false;
+GMAT sat1report.Filename = 'C:\Users\Joseph\MATLAB Drive\Fall 2021\AAE 532\Problem Set 05\problem 3\sat1oct09inc0.txt';
+GMAT sat1report.Precision = 16;
+GMAT sat1report.Add = {sat1.Earth.SMA, sat1.Earth.ECC, sat1.Earth.RadPer, sat1.Earth.Energy, sat1.Earth.HMAG, sat1.Earth.RMAG, sat1.EarthMJ2000Eq.VMAG, sat1.Earth.TA, sat1.EarthMJ2000Eq.FPA};
+GMAT sat1report.WriteHeaders = true;
+GMAT sat1report.LeftJustify = On;
+GMAT sat1report.ZeroFill = Off;
+GMAT sat1report.FixedWidth = true;
+GMAT sat1report.Delimiter = ' ';
+GMAT sat1report.ColumnWidth = 23;
+GMAT sat1report.WriteReport = true;
+
+Create ReportFile sat2report;
+GMAT sat2report.SolverIterations = Current;
+GMAT sat2report.UpperLeft = [ 0 0 ];
+GMAT sat2report.Size = [ 0 0 ];
+GMAT sat2report.RelativeZOrder = 0;
+GMAT sat2report.Maximized = false;
+GMAT sat2report.Filename = 'C:\Users\Joseph\MATLAB Drive\Fall 2021\AAE 532\Problem Set 05\problem 3\sat2oct09inc0.txt';
+GMAT sat2report.Precision = 16;
+GMAT sat2report.Add = {sat2.Earth.SMA, sat2.Earth.ECC, sat2.Earth.RadPer, sat2.Earth.Energy, sat2.Earth.HMAG, sat2.Earth.RMAG, sat2.EarthMJ2000Eq.VMAG, sat2.Earth.TA, sat2.EarthMJ2000Eq.FPA};
+GMAT sat2report.WriteHeaders = true;
+GMAT sat2report.LeftJustify = On;
+GMAT sat2report.ZeroFill = Off;
+GMAT sat2report.FixedWidth = true;
+GMAT sat2report.Delimiter = ' ';
+GMAT sat2report.ColumnWidth = 23;
+GMAT sat2report.WriteReport = true;
+
+Create ReportFile sat3report;
+GMAT sat3report.SolverIterations = Current;
+GMAT sat3report.UpperLeft = [ 0 0 ];
+GMAT sat3report.Size = [ 0 0 ];
+GMAT sat3report.RelativeZOrder = 0;
+GMAT sat3report.Maximized = false;
+GMAT sat3report.Filename = 'C:\Users\Joseph\MATLAB Drive\Fall 2021\AAE 532\Problem Set 05\problem 3\sat3oct09inc0.txt';
+GMAT sat3report.Precision = 16;
+GMAT sat3report.Add = {sat3.Earth.SMA, sat3.Earth.ECC, sat3.Earth.RadPer, sat3.Earth.Energy, sat3.Earth.HMAG, sat3.Earth.RMAG, sat3.EarthMJ2000Eq.VMAG, sat3.Earth.TA, sat3.EarthMJ2000Eq.FPA};
+GMAT sat3report.WriteHeaders = true;
+GMAT sat3report.LeftJustify = On;
+GMAT sat3report.ZeroFill = Off;
+GMAT sat3report.FixedWidth = true;
+GMAT sat3report.Delimiter = ' ';
+GMAT sat3report.ColumnWidth = 23;
+GMAT sat3report.WriteReport = true;
+
+Create ReportFile sat4report;
+GMAT sat4report.SolverIterations = Current;
+GMAT sat4report.UpperLeft = [ 0 0 ];
+GMAT sat4report.Size = [ 0 0 ];
+GMAT sat4report.RelativeZOrder = 0;
+GMAT sat4report.Maximized = false;
+GMAT sat4report.Filename = 'C:\Users\Joseph\MATLAB Drive\Fall 2021\AAE 532\Problem Set 05\problem 3\sat4oct09inc0.txt';
+GMAT sat4report.Precision = 16;
+GMAT sat4report.Add = {sat4.Earth.SMA, sat4.Earth.ECC, sat4.Earth.RadPer, sat4.Earth.Energy, sat4.Earth.HMAG, sat4.Earth.RMAG, sat4.EarthMJ2000Eq.VMAG, sat4.Earth.TA, sat4.EarthMJ2000Eq.FPA};
+GMAT sat4report.WriteHeaders = true;
+GMAT sat4report.LeftJustify = On;
+GMAT sat4report.ZeroFill = Off;
+GMAT sat4report.FixedWidth = true;
+GMAT sat4report.Delimiter = ' ';
+GMAT sat4report.ColumnWidth = 23;
+GMAT sat4report.WriteReport = true;
+
+
+%----------------------------------------
+%---------- Mission Sequence
+%----------------------------------------
+
+BeginMissionSequence;
+Propagate EarthPointMass(sat1) EarthMoon(sat2) EarthSun(sat3) EarthMoonSun(sat4) {sat1.ElapsedDays = 120};

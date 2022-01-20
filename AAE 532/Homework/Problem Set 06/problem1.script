@@ -1,0 +1,218 @@
+%General Mission Analysis Tool(GMAT) Script
+%Created: 2021-10-14 23:00:36
+
+
+%----------------------------------------
+%---------- Spacecraft
+%----------------------------------------
+
+Create Spacecraft Periapsis;
+GMAT Periapsis.DateFormat = UTCGregorian;
+GMAT Periapsis.Epoch = '01 Jan 2000 11:59:28.000';
+GMAT Periapsis.CoordinateSystem = EarthMJ2000Eq;
+GMAT Periapsis.DisplayStateType = Keplerian;
+GMAT Periapsis.SMA = 51020.00000000001;
+GMAT Periapsis.ECC = 0.3999999999999997;
+GMAT Periapsis.INC = 29.99999999999999;
+GMAT Periapsis.RAAN = 45.00000000000001;
+GMAT Periapsis.AOP = 60.00000000000006;
+GMAT Periapsis.TA = 120;
+GMAT Periapsis.DryMass = 850;
+GMAT Periapsis.Cd = 2.2;
+GMAT Periapsis.Cr = 1.8;
+GMAT Periapsis.DragArea = 15;
+GMAT Periapsis.SRPArea = 1;
+GMAT Periapsis.SPADDragScaleFactor = 1;
+GMAT Periapsis.SPADSRPScaleFactor = 1;
+GMAT Periapsis.NAIFId = -10000001;
+GMAT Periapsis.NAIFIdReferenceFrame = -9000001;
+GMAT Periapsis.OrbitColor = Red;
+GMAT Periapsis.TargetColor = Teal;
+GMAT Periapsis.OrbitErrorCovariance = [ 1e+70 0 0 0 0 0 ; 0 1e+70 0 0 0 0 ; 0 0 1e+70 0 0 0 ; 0 0 0 1e+70 0 0 ; 0 0 0 0 1e+70 0 ; 0 0 0 0 0 1e+70 ];
+GMAT Periapsis.CdSigma = 1e+70;
+GMAT Periapsis.CrSigma = 1e+70;
+GMAT Periapsis.Id = 'SatId';
+GMAT Periapsis.Attitude = CoordinateSystemFixed;
+GMAT Periapsis.SPADSRPInterpolationMethod = Bilinear;
+GMAT Periapsis.SPADSRPScaleFactorSigma = 1e+70;
+GMAT Periapsis.SPADDragInterpolationMethod = Bilinear;
+GMAT Periapsis.SPADDragScaleFactorSigma = 1e+70;
+GMAT Periapsis.ModelFile = 'aura.3ds';
+GMAT Periapsis.ModelOffsetX = 0;
+GMAT Periapsis.ModelOffsetY = 0;
+GMAT Periapsis.ModelOffsetZ = 0;
+GMAT Periapsis.ModelRotationX = 0;
+GMAT Periapsis.ModelRotationY = 0;
+GMAT Periapsis.ModelRotationZ = 0;
+GMAT Periapsis.ModelScale = 1;
+GMAT Periapsis.AttitudeDisplayStateType = 'Quaternion';
+GMAT Periapsis.AttitudeRateDisplayStateType = 'AngularVelocity';
+GMAT Periapsis.AttitudeCoordinateSystem = EarthMJ2000Eq;
+GMAT Periapsis.EulerAngleSequence = '321';
+
+Create Spacecraft AscendingNode;
+GMAT AscendingNode.DateFormat = UTCGregorian;
+GMAT AscendingNode.Epoch = '01 Jan 2000 11:59:28.000';
+GMAT AscendingNode.CoordinateSystem = EarthMJ2000Eq;
+GMAT AscendingNode.DisplayStateType = Keplerian;
+GMAT AscendingNode.SMA = 51020.00000000001;
+GMAT AscendingNode.ECC = 0.3999999999999997;
+GMAT AscendingNode.INC = 29.99999999999999;
+GMAT AscendingNode.RAAN = 45.00000000000001;
+GMAT AscendingNode.AOP = 60.00000000000006;
+GMAT AscendingNode.TA = 120;
+GMAT AscendingNode.DryMass = 850;
+GMAT AscendingNode.Cd = 2.2;
+GMAT AscendingNode.Cr = 1.8;
+GMAT AscendingNode.DragArea = 15;
+GMAT AscendingNode.SRPArea = 1;
+GMAT AscendingNode.SPADDragScaleFactor = 1;
+GMAT AscendingNode.SPADSRPScaleFactor = 1;
+GMAT AscendingNode.NAIFId = -10000001;
+GMAT AscendingNode.NAIFIdReferenceFrame = -9000001;
+GMAT AscendingNode.OrbitColor = [0 255 217];
+GMAT AscendingNode.TargetColor = [128 0 10];
+GMAT AscendingNode.OrbitErrorCovariance = [ 1e+70 0 0 0 0 0 ; 0 1e+70 0 0 0 0 ; 0 0 1e+70 0 0 0 ; 0 0 0 1e+70 0 0 ; 0 0 0 0 1e+70 0 ; 0 0 0 0 0 1e+70 ];
+GMAT AscendingNode.CdSigma = 1e+70;
+GMAT AscendingNode.CrSigma = 1e+70;
+GMAT AscendingNode.Id = 'SatId';
+GMAT AscendingNode.Attitude = CoordinateSystemFixed;
+GMAT AscendingNode.SPADSRPInterpolationMethod = Bilinear;
+GMAT AscendingNode.SPADSRPScaleFactorSigma = 1e+70;
+GMAT AscendingNode.SPADDragInterpolationMethod = Bilinear;
+GMAT AscendingNode.SPADDragScaleFactorSigma = 1e+70;
+GMAT AscendingNode.ModelFile = 'aura.3ds';
+GMAT AscendingNode.ModelOffsetX = 0;
+GMAT AscendingNode.ModelOffsetY = 0;
+GMAT AscendingNode.ModelOffsetZ = 0;
+GMAT AscendingNode.ModelRotationX = 0;
+GMAT AscendingNode.ModelRotationY = 0;
+GMAT AscendingNode.ModelRotationZ = 0;
+GMAT AscendingNode.ModelScale = 1;
+GMAT AscendingNode.AttitudeDisplayStateType = 'Quaternion';
+GMAT AscendingNode.AttitudeRateDisplayStateType = 'AngularVelocity';
+GMAT AscendingNode.AttitudeCoordinateSystem = EarthMJ2000Eq;
+GMAT AscendingNode.EulerAngleSequence = '321';
+
+Create Spacecraft full;
+GMAT full.DateFormat = UTCGregorian;
+GMAT full.Epoch = '01 Jan 2000 11:59:28.000';
+GMAT full.CoordinateSystem = EarthMJ2000Eq;
+GMAT full.DisplayStateType = Keplerian;
+GMAT full.SMA = 51020.00000000001;
+GMAT full.ECC = 0.3999999999999997;
+GMAT full.INC = 29.99999999999999;
+GMAT full.RAAN = 45.00000000000001;
+GMAT full.AOP = 60.00000000000006;
+GMAT full.TA = 120;
+GMAT full.DryMass = 850;
+GMAT full.Cd = 2.2;
+GMAT full.Cr = 1.8;
+GMAT full.DragArea = 15;
+GMAT full.SRPArea = 1;
+GMAT full.SPADDragScaleFactor = 1;
+GMAT full.SPADSRPScaleFactor = 1;
+GMAT full.NAIFId = -10000001;
+GMAT full.NAIFIdReferenceFrame = -9000001;
+GMAT full.OrbitColor = [255 223 0];
+GMAT full.TargetColor = [128 0 10];
+GMAT full.OrbitErrorCovariance = [ 1e+70 0 0 0 0 0 ; 0 1e+70 0 0 0 0 ; 0 0 1e+70 0 0 0 ; 0 0 0 1e+70 0 0 ; 0 0 0 0 1e+70 0 ; 0 0 0 0 0 1e+70 ];
+GMAT full.CdSigma = 1e+70;
+GMAT full.CrSigma = 1e+70;
+GMAT full.Id = 'SatId';
+GMAT full.Attitude = CoordinateSystemFixed;
+GMAT full.SPADSRPInterpolationMethod = Bilinear;
+GMAT full.SPADSRPScaleFactorSigma = 1e+70;
+GMAT full.SPADDragInterpolationMethod = Bilinear;
+GMAT full.SPADDragScaleFactorSigma = 1e+70;
+GMAT full.ModelFile = 'aura.3ds';
+GMAT full.ModelOffsetX = 0;
+GMAT full.ModelOffsetY = 0;
+GMAT full.ModelOffsetZ = 0;
+GMAT full.ModelRotationX = 0;
+GMAT full.ModelRotationY = 0;
+GMAT full.ModelRotationZ = 0;
+GMAT full.ModelScale = 1;
+GMAT full.AttitudeDisplayStateType = 'Quaternion';
+GMAT full.AttitudeRateDisplayStateType = 'AngularVelocity';
+GMAT full.AttitudeCoordinateSystem = EarthMJ2000Eq;
+GMAT full.EulerAngleSequence = '321';
+
+
+
+%----------------------------------------
+%---------- ForceModels
+%----------------------------------------
+
+Create ForceModel DefaultProp_ForceModel;
+GMAT DefaultProp_ForceModel.CentralBody = Earth;
+GMAT DefaultProp_ForceModel.PrimaryBodies = {Earth};
+GMAT DefaultProp_ForceModel.Drag = None;
+GMAT DefaultProp_ForceModel.SRP = Off;
+GMAT DefaultProp_ForceModel.RelativisticCorrection = Off;
+GMAT DefaultProp_ForceModel.ErrorControl = RSSStep;
+GMAT DefaultProp_ForceModel.GravityField.Earth.Degree = 0;
+GMAT DefaultProp_ForceModel.GravityField.Earth.Order = 0;
+GMAT DefaultProp_ForceModel.GravityField.Earth.StmLimit = 100;
+GMAT DefaultProp_ForceModel.GravityField.Earth.PotentialFile = 'JGM2.cof';
+GMAT DefaultProp_ForceModel.GravityField.Earth.TideModel = 'None';
+
+%----------------------------------------
+%---------- Propagators
+%----------------------------------------
+
+Create Propagator DefaultProp;
+GMAT DefaultProp.FM = DefaultProp_ForceModel;
+GMAT DefaultProp.Type = RungeKutta89;
+GMAT DefaultProp.InitialStepSize = 60;
+GMAT DefaultProp.Accuracy = 9.999999999999999e-12;
+GMAT DefaultProp.MinStep = 0.001;
+GMAT DefaultProp.MaxStep = 2700;
+GMAT DefaultProp.MaxStepAttempts = 50;
+GMAT DefaultProp.StopIfAccuracyIsViolated = true;
+
+%----------------------------------------
+%---------- Subscribers
+%----------------------------------------
+
+Create OrbitView DefaultOrbitView;
+GMAT DefaultOrbitView.SolverIterations = Current;
+GMAT DefaultOrbitView.UpperLeft = [ 0.04647058823529412 -0.008235294117647059 ];
+GMAT DefaultOrbitView.Size = [ 0.6164705882352941 0.971764705882353 ];
+GMAT DefaultOrbitView.RelativeZOrder = 55;
+GMAT DefaultOrbitView.Maximized = false;
+GMAT DefaultOrbitView.Add = {full, Periapsis, AscendingNode, Earth};
+GMAT DefaultOrbitView.CoordinateSystem = EarthMJ2000Eq;
+GMAT DefaultOrbitView.DrawObject = [ true true true true ];
+GMAT DefaultOrbitView.DataCollectFrequency = 1;
+GMAT DefaultOrbitView.UpdatePlotFrequency = 50;
+GMAT DefaultOrbitView.NumPointsToRedraw = 0;
+GMAT DefaultOrbitView.ShowPlot = true;
+GMAT DefaultOrbitView.MaxPlotPoints = 20000;
+GMAT DefaultOrbitView.ShowLabels = true;
+GMAT DefaultOrbitView.ViewPointReference = Earth;
+GMAT DefaultOrbitView.ViewPointVector = [ 0 0 100000 ];
+GMAT DefaultOrbitView.ViewDirection = Earth;
+GMAT DefaultOrbitView.ViewScaleFactor = 1;
+GMAT DefaultOrbitView.ViewUpCoordinateSystem = EarthMJ2000Eq;
+GMAT DefaultOrbitView.ViewUpAxis = Z;
+GMAT DefaultOrbitView.EclipticPlane = Off;
+GMAT DefaultOrbitView.XYPlane = On;
+GMAT DefaultOrbitView.WireFrame = Off;
+GMAT DefaultOrbitView.Axes = On;
+GMAT DefaultOrbitView.Grid = Off;
+GMAT DefaultOrbitView.SunLine = Off;
+GMAT DefaultOrbitView.UseInitialView = On;
+GMAT DefaultOrbitView.StarCount = 7000;
+GMAT DefaultOrbitView.EnableStars = On;
+GMAT DefaultOrbitView.EnableConstellations = Off;
+
+
+%----------------------------------------
+%---------- Mission Sequence
+%----------------------------------------
+
+BeginMissionSequence;
+Propagate 'Periapsis' DefaultProp(Periapsis) {Periapsis.Earth.TA = 0};
+Propagate 'AN' DefaultProp(AscendingNode) {AscendingNode.Earth.TA = -60};
+Propagate 'FullOrbit' DefaultProp(full) {full.Earth.TA = 119.9999};
